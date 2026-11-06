@@ -1,0 +1,235 @@
+/* ==========================================================================
+   PALETA DE COLORES: Azul Oscuro, Celeste & Blanco
+   ========================================================================== */
+:root {
+  --fondo-principal: #0b1329;    /* Azul muy oscuro tecnológico */
+  --fondo-tarjeta: #132042;      /* Superficie contenedor */
+  --fondo-hover: #1c2d5a;        /* Hover para tarjetas */
+  --celeste: #38bdf8;            /* Celeste brillante de acento */
+  --celeste-hover: #7dd3fc;      /* Celeste claro */
+  --texto-blanco: #ffffff;       /* Blanco puro */
+  --texto-secundario: #94a3b8;   /* Gris azulado para descripciones */
+  --borde-sutil: #1e293b;        /* Bordes discretos */
+  --fuente: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--fondo-principal);
+  color: var(--texto-blanco);
+  font-family: var(--fuente);
+  line-height: 1.6;
+}
+
+/* ENCABEZADO Y NAVEGACIÓN */
+.encabezado {
+  background-color: var(--fondo-tarjeta);
+  border-bottom: 1px solid var(--borde-sutil);
+  padding: 1.25rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.marca {
+  color: var(--texto-blanco);
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.marca span {
+  color: var(--celeste);
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: var(--texto-secundario);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--celeste);
+}
+
+/* MAIN Y SECCIONES */
+main {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.seccion, .presentacion {
+  margin-bottom: 4rem;
+}
+
+.etiqueta {
+  color: var(--celeste);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+h1 span {
+  color: var(--celeste);
+}
+
+h2 {
+  font-size: 1.6rem;
+  color: var(--texto-blanco);
+  margin-bottom: 1.25rem;
+}
+
+.presentacion h2 {
+  font-size: 1.25rem;
+  color: var(--texto-secundario);
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.iniciales {
+  width: 60px;
+  height: 60px;
+  background-color: var(--celeste);
+  color: var(--fondo-principal);
+  font-weight: 800;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+}
+
+.boton {
+  display: inline-block;
+  background-color: var(--celeste);
+  color: var(--fondo-principal);
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.boton:hover {
+  background-color: var(--celeste-hover);
+}
+
+/* TARJETAS DE PROYECTOS */
+.tarjetas {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tarjeta {
+  background-color: var(--fondo-tarjeta);
+  border: 1px solid var(--borde-sutil);
+  border-left: 4px solid var(--celeste);
+  border-radius: 8px;
+  padding: 1.5rem;
+  position: relative;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-3px);
+  background-color: var(--fondo-hover);
+}
+
+.numero {
+  color: var(--celeste);
+  font-weight: 800;
+  font-size: 0.85rem;
+}
+
+.tarjeta h3 {
+  font-size: 1.25rem;
+  margin: 0.4rem 0 0.8rem;
+  color: var(--texto-blanco);
+}
+
+.tarjeta p {
+  color: var(--texto-secundario);
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.tarjeta p strong {
+  color: var(--texto-blanco);
+}
+
+/* HABILIDADES */
+.habilidades {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.75rem;
+}
+
+.habilidades li {
+  background-color: var(--fondo-tarjeta);
+  border: 1px solid var(--borde-sutil);
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+  color: var(--texto-blanco);
+  font-size: 0.95rem;
+}
+
+/* CONTACTO */
+.contacto a {
+  color: var(--celeste);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contacto a:hover {
+  text-decoration: underline;
+}
+
+.info-contacto {
+  margin-top: 1rem;
+  font-size: 1.05rem;
+}
+
+/* FOOTER */
+footer {
+  border-top: 1px solid var(--borde-sutil);
+  text-align: center;
+  padding: 2rem 1.5rem;
+  color: var(--texto-secundario);
+  font-size: 0.85rem;
+}
+
+/* REGLA RESPONSIVE PARA CELULARES */
+@media (max-width: 600px) {
+  .encabezado {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}
